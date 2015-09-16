@@ -1,8 +1,13 @@
 <template name="rubricItem">
   <div class="rubric">
     <div class="rubric-content">
-      <h3><a href="{{pathFor 'rubricDetail'}}">{{name}}</a></h3>
+      <h3>{{name}} <span>{{submitted}}</span></h3>
+      <p>
+        {{#if ownRubric}}
+		  <a href="{{pathFor 'rubricEdit'}}">Edit</a>
+		{{/if}}
+      </p>
     </div>
-	<a class="discuss btn btn-default" href="{{pathFor 'rubricDetail'}}">Details</a>
+    <a href="{{pathFor 'rubricDetail'}}" class="discuss btn btn-default">Details</a>
   </div>
 </template>

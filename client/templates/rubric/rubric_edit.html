@@ -1,12 +1,14 @@
-<template name="rubricSubmit">
+<template name="rubricEdit">
   <form class="main form page">
     <div class="form-group">
       <label class="control-label" for="name">Name</label>
       <div class="controls">
-        <input name="name" id="name" type="text" value=""
+        <input name="name" id="name" type="text" value="{{name}}"
 			placeholder="Rubric name" class="form-control"/>
       </div>
     </div>
-    <input type="submit" value="Submit" class="btn btn-primary"/>
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    <hr/>
+    <a class="btn btn-danger delete" href="#">Delete rubric</a>
   </form>
 </template>

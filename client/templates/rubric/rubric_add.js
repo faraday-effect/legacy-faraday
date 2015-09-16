@@ -1,4 +1,4 @@
-Template.rubricSubmit.events({
+Template.rubricAdd.events({
   'submit form': function(e) {
 	e.preventDefault();
 
