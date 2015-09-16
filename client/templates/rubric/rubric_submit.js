@@ -11,7 +11,7 @@ Template.rubricSubmit.events({
 		return alert(error.reason);
 	  }
 
-	  Router.go('rubricPage', {_id: result._id});
+	  Router.go('rubricDetail', {_id: result._id});
 	});
   }
 });
