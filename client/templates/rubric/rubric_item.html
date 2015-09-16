@@ -2,6 +2,19 @@
   <div class="rubric">
     <div class="rubric-content">
       <h3>{{name}} <span>{{submitted}}</span></h3>
+	  {{#if questions}}
+		<ol>
+		  {{#each questions}}
+			<li>{{text}}</li>
+		  {{/each}}
+		</ol>
+	  {{else}}
+		<p>No questions</p>
+	  {{/if}}
+	  <form class="question-input">
+		<input name="new-question" type="text" />
+		<button type="submit">Add Question</button>
+	  </form>
       <p>
         {{#if ownRubric}}
 		  <a href="{{pathFor 'rubricEdit'}}">Edit</a>

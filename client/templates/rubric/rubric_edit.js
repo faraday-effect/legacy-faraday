@@ -10,7 +10,6 @@ Template.rubricEdit.events({
 
     Rubrics.update(currentRubricId, {$set: rubricProperties}, function(error) {
       if (error) {
-        // display the error to the user
         alert(error.reason);
       } else {
         Router.go('rubricDetail', {_id: currentRubricId});
